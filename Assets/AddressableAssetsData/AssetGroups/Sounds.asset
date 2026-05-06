@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Sounds
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Sounds
+  m_GUID: 58bc349068db9574490e4822f0fd7245
+  m_SerializeEntries:
+  - m_GUID: 116dcb4f2a9ff4c4d84c41b6555dd0b2
+    m_Address: Assets/Audio/SFX/Coin_Collect.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 855d828cbc69da640a0f18c6a64cda97
+    m_Address: Assets/Audio/SFX/8BIT_RETRO_Coin_Collect_Two_Note_Bright_Fast_mono.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9867431f79b143241b1eae2dad104ae3
+    m_Address: Assets/Audio/SFX/Saw_Idle.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a2090faf41364aa4e829de2315bba331
+    m_Address: Assets/Audio/SFX/Saw_Cutting.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 553f818da1769cc4c89acf0deee8ef0d, type: 2}
+  m_SchemaSet:
+    m_Schemas: []
