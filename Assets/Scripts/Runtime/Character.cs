@@ -61,6 +61,12 @@ public class Character : MonoBehaviour
     private float enemyStompHeightOffset = 0.3f;
     //Gegner Ende
 
+    [SerializeField] private float maxHealth = 100.0f;
+
+    private float currentHealth;
+    public float GetCurrentHealth() => this.currentHealth;
+    public float GetMaxHealth() => this.maxHealth;
+
     private Vector3 characterMovement;
     private Vector3 jumpVelocity;
     private Vector3 platformVelocity;
@@ -68,6 +74,7 @@ public class Character : MonoBehaviour
 
     private void Start()
     {
+        this.currentHealth = this.maxHealth;
         this.controller = this.GetComponent<CharacterController>();
         this.moveAction = InputSystem.actions.FindAction("Move");
         this.jumpAction = InputSystem.actions.FindAction("Jump");
@@ -280,6 +287,12 @@ public class Character : MonoBehaviour
         {
             Debug.Log("Was glotzt du von der Seite");
         }
+    }
+
+    public void InflictDamage(float amount)
+    {
+        this.currentHealth -= amount;
+        this.currentHealth = Mathf.Clamp(this.currentHealth, 0.0f, this.maxHealth); 
     }
 }
 

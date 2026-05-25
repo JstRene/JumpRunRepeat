@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class Saw : MonoBehaviour
 {
@@ -12,10 +13,13 @@ public class Saw : MonoBehaviour
     [SerializeField] private AudioClip idleSound;
     [SerializeField] private AudioClip cuttingSound;
     [SerializeField] private AudioMixerGroup sfxMixerGroup;
+    
     private bool _isCutting;
 
     [Header("Particles")]
     [SerializeField] private ParticleSystem cuttingParticles;
+
+    [SerializeField] public float damagePerSecond = 10.0f;
 
     private void Awake()
     {
@@ -80,5 +84,14 @@ public class Saw : MonoBehaviour
     {
         _audioSource.clip = clip;
         _audioSource.Play();
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            var character = other.GetComponentInChildren<Character>();
+            character.InflictDamage(this.damagePerSecond * Time.fixedDeltaTime);
+        }
     }
 }
